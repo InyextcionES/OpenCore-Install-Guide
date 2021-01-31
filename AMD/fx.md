@@ -253,29 +253,44 @@ Ajustes relacionados a el kernel, en nuestro caso habilitaremos lo siguiente:
 
 * **AppleCpuPmCfgLock**: NO
   * Solo es necesario cuando CFG-Lock no se puede deshabilitar en BIOS, la contraparte de Clover sería AppleIntelCPUPM. Los usuarios de AMD pueden ignorar esto.
+
 * **AppleXcpmCfgLock**: NO
   * Solo es necesario cuando CFG-Lock no se puede deshabilitar en BIOS, la contraparte de Clover sería KernelPM. Los usuarios de AMD pueden ignorar esto.
+
 * **AppleXcpmExtraMsrs**: NO
-  * Deshabilita múltiples accesos MSR necesarios para ciertas CPUs no soportadas como Pentiums y Xeons
+  * Deshabilita múltiples accesos MSR necesarios para ciertas CPUs no soportadas como Pentiums y Xeons.
+
 * **CustomSMBIOSGuid**: NO
   * Hace parches de GUID para el modo `Custom` de UpdateSMBIOSMode. Usualmente relevante para laptops Dell
-  * La habilitación de este quirk con el modo `Custom` de UpdateSMBIOSMode también puede deshabilitar la inyección de SMBIOS en sistemas operativos que no son de Apple, aunque no recomendamos esto ya que rompe la compatibilildad con BootCamp. Úsalo bajo tu propio riesgo; debe ser utilizado en conjunto con `PlatformInfo -> UpdateSMBIOSMode -> Custom`
+  * La habilitación de este quirk con el modo `Custom` de UpdateSMBIOSMode también puede deshabilitar la inyección de SMBIOS en sistemas operativos que no son de Apple, aunque no recomendamos esto ya que rompe la compatibilildad con BootCamp. Úsalo bajo tu propio riesgo; debe ser utilizado en conjunto con `PlatformInfo -> UpdateSMBIOSMode -> Custom`.
+
 * **DisableIoMapper**: NO
   * AMD no soporta DMAR o VT-D, por lo que es irrelevante.
+
 * **DisableLinkeditJettison**: YES
   * Permite que Lilu y otros tengan rendimiento más estable sin el quirk `keepsyms=1`
+
 * **DisableRtcChecksum**: NO
-  * Impide que AppleRTC escriba en la suma de comprobación primaria (0x58-0x59), necesaria para los usuarios que reciben el reinicio del BIOS o son enviados al modo seguro después del reinicio/apagado
+  * Impide que AppleRTC escriba en la suma de comprobación primaria (0x58-0x59), necesaria para los usuarios que reciben el reinicio del BIOS o son enviados al modo seguro después del reinicio/apagado.
+
 * **ExtendBTFeatureFlags** NO
-  * Útil para aquellos que tengan problemas con continuity con tarjetas que no sean de Apple/Fenvi
+  * Útil para aquellos que tengan problemas con continuity con tarjetas que no sean de Apple/Fenvi.
+
 * **LapicKernelPanic**: NO
-  * Inhabilita el kernel panic en la interrupción del kernel de AP, generalmente necesaria para los sistemas HP. El equivalente de Clover es `Kernel LAPIC`
+  * Inhabilita el kernel panic en la interrupción del kernel de AP, generalmente necesaria para los sistemas HP. El equivalente de Clover es `Kernel LAPIC`.
+
 * **LegacyCommpage**: NO
-  * Resuelve el requerimiento de SSS3 para CPUS de 64 bits en macOS, por lo que es principalmente relevanete para CPUs como Pentium 4 de 64 bits (como Prescott)
+  * Resuelve el requerimiento de SSS3 para CPUS de 64 bits en macOS, por lo que es principalmente relevanete para CPUs como Pentium 4 de 64 bits (como Prescott).
+
 * **PanicNoKextDump**: YES
-  * Permite leer los registros de kernel panics cuando éstos ocurren
+  * Permite leer los registros de kernel panics cuando éstos ocurren.
+
 * **PowerTimeoutKernelPanic**: YES
   * Ayuda a solucionar kernel panics relacionados con los cambios de energía con los drivers de Apple en macOS Catalina, especialmente con audio digital.
+
+* **SetApfsTrimTimeout**: `-1`
+  * Establece el tiempo de espera en microsegundos para el sistema de archivos APFS en SSDs, únicamente aplicable para macOS 10.14 y posterior con SSDs problemáticas.
+
 * **XhciPortLimit**: YES
   * Este es en realidad el parche de límite de 15 puertos, no confíes en él, ya que no es una solución garantizada para reparar USBs. Una mejor solución para AMD puede ser encontrada aquí: [USB Mapping para AMD](https://inyextciones.github.io/OpenCore-Post-Install/usb/)
 
@@ -571,14 +586,17 @@ Configuramos Generic -> ROM a una ROM de Apple (extraída de una Mac real), la d
 * **AdviseWindows**: NO
   * Se usa cuando la partición EFI no es la primera en la unidad de Windows
 
-* **SystemMemoryStatus**: Auto
-  * Establece si la memoria está soldada o no en la información del SMBIOS, esto es puramente cosmético, por lo que recomendamos "Auto"
+* **MaxBIOSVersion**: NO
+  * Establece la versión de la BIOS a la máxima para prevenir actualizaciones de firmware en Big Sur y posterior. Esto es principalmente aplicable para Macs genuinas. 
 
 * **ProcessorType**: `0`
   * Ponlo en `0` para la detección automática del tipo de procesador. Sin embargo, este valor puede ser cambiado si lo deseas. Mira [AppleSmBios.h](https://github.com/acidanthera/OpenCorePkg/blob/master/Include/Apple/IndustryStandard/AppleSmBios.h) para ver valores posibles.
 
 * **SpoofVendor**: YES
   * Intercambia el campo del proveedor por Acidanthera. Generalmente no es seguro usar Apple como proveedor.
+
+* **SystemMemoryStatus**: Auto
+  * Establece si la memoria está soldada o no en la información del SMBIOS, esto es puramente cosmético, por lo que recomendamos "Auto"
 
 * **UpdateDataHub**: YES
   * Actualiza campos de Data Hub
@@ -651,6 +669,10 @@ En relación con los quirks con el entorno UEFI, cambiaremos lo siguiente:
 
 * **RequestBootVarRouting**: YES
   * Redirige AptioMemoryFix desde `EFI_GLOBAL_VARIABLE_GUID` a `OC_VENDOR_VARIABLE_GUID`. Necesario para cuando el firmware intenta eliminar las entradas de arranque y se recomienda que esté habilitado en todos los sistemas para la instalación correcta de las actualizaciones, el funcionamiento del panel de control del disco de inicio, etc.
+
+* **DisableSecurityPolicy**: NO
+  * Deshabilita la Política de Seguridad de la Plataforma (Platform Security Policy) en el firmware, recomendado para firmwares con errores donde la deshabilitación del arranque seguro no permite la carga de drivers en firmwares de terceros.
+  * Si tienes un dispositivo Microsoft Surface , te recomendamos que habilites esta opción.
 
 * **UnblockFsConnect**: NO
   * Algunos firmwares bloquean a las llamadas "partition handles" abriéndolas en modo de controlador, lo que hace que los protocolos del sistema de archivos no puedan instalarse. Principalmente relevante para sistemas HP cuando no se ven discos enumerados
