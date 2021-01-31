@@ -27,6 +27,14 @@ Ahora abramos nuestra carpeta EFI y veamos qué hay dentro:
 
 Algo que te darás cuenta es que esta carpeta viene con varios archivos en las subcarpetas `Drivers` y `Tools`, no queremos la mayoría de estos.
 
+* **Conserva los siguientes drivers**(si aplica):
+
+| Driver | Status | Descripción |
+| :--- | :--- | :--- |
+| OpenUsbKbDxe.efi | <span style="color:#30BCD5"> Opcional </span> | Requerido para sistemas que no tengan UEFI (pre-2012) |
+| OpenPartitionDxe.efi | ^^ | Requerido para arrancar recuperación en  macOS 10.7-10.9 |
+| OpenRuntime.efi | <span style="color:red"> Requerido </span> | Necesario para operar correctamente | 
+
 * **Eliminar todo de Drivers (menos OpenRuntime.efi):**
 
 ::: details Más información sobre los drivers
@@ -47,6 +55,11 @@ Algo que te darás cuenta es que esta carpeta viene con varios archivos en las s
   * HiiDatabase.efi
     * Se usa para arreglar el soporte de GUI como OpenShell.efi en Sandy Bridge y versiones anteriores
       * No es necesario para arrancar
+  * OpenPartitionDxe
+    * Necesario para arrancar desde OS X 10.7 hasta 10.9
+	    * Nota: Usuarios de OpenDuet (es decir, sin UEFI) tendrán este driver incorporado, por lo que no lo requieren.
+  * OpenHfsPlus.efi
+    * Driver código abierto de HFS Plus. Es bastante lento así que no recomendamos su uso a menos que sepas lo que estás haciendo.
   * OpenCanopy.efi
     * Testa es la GUI opcional de OpenCore, veremos cómo configurar esto en [Post Instalación](https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html), así que elimina esto por ahora
   * Ps2KeyboardDxe.efi + Ps2MouseDxe.efi
@@ -55,8 +68,11 @@ Algo que te darás cuenta es que esta carpeta viene con varios archivos en las s
 
 :::
 
-* **Borra todo de la carpeta Tools (menos OpenShell.efi)**
-  * Son demasiados para enumerarlos a todos, pero recomendamos mantener OpenShell.efi para solucionar eventuales problemas.
+* **Conserva lo siguiente en "Tools":**
+
+| Tool | Status | Descripción |
+| :--- | :--- | :--- |
+| OpenShell.efi | <span style="color:#30BCD5"> Opcional </span> | Recomendado para depuración más fácil |
 
 
 
