@@ -27,7 +27,10 @@ Ahora abramos nuestra carpeta EFI y veamos qué hay dentro:
 
 Algo que te darás cuenta es que esta carpeta viene con varios archivos en las subcarpetas `Drivers` y `Tools`, no queremos la mayoría de estos.
 
-* **Eliminar de drivers:**
+* **Eliminar todo de Drivers (menos OpenRuntime.efi):**
+
+::: details Más información sobre los drivers
+
   * AudioDxe.efi
     * No relacionado con el soporte de audio en macOS
   * CrScreenshotDxe.efi
@@ -35,7 +38,7 @@ Algo que te darás cuenta es que esta carpeta viene con varios archivos en las s
   * OpenUsbKbDxe.efi
     * Se utiliza para el menú de selección de OpenCore en **sistemas Legacy que ejecutan DuetPkg**, [no recomendado e incluso dañino en Ivy Bridge y posterior](https://applelife.ru/threads/opencore-obsuzhdenie-i-ustanovka.2944066/page-176#post-856653)
   * UsbMouseDxe.efi
-    * idea similar a OpenUsbKbDxe, solo debería ser necesaria en sistemas Legacy que usan DuetPkg
+    * Idea similar a OpenUsbKbDxe, solo debería ser necesaria en sistemas Legacy que usan DuetPkg
   * NvmExpressDxe.efi
     * Se utiliza para Haswell y versiones anteriores cuando no hay un controlador NVMe integrado en el firmware
   * XhciDxe.efi
@@ -50,8 +53,12 @@ Algo que te darás cuenta es que esta carpeta viene con varios archivos en las s
     * Es bastante obvio en qué casos los lo necesitas, los usuarios de teclado y mouse USB no lo necesitan
     * Recordatorio: PS2 ≠ USB
 
-* **Borra todo de la carpeta "tools"**
-  * Son demasiados para enumerarlos a todos, pero recomiendo mantener OpenShell.efi para solucionar eventuales problemas.
+:::
+
+* **Borra todo de la carpeta Tools (menos OpenShell.efi)**
+  * Son demasiados para enumerarlos a todos, pero recomendamos mantener OpenShell.efi para solucionar eventuales problemas.
+
+
 
 Una EFI limpia:
 

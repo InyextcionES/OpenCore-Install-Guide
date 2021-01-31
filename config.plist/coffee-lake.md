@@ -393,25 +393,32 @@ Security se explica por sí sola, **no te lo saltes**. Vamos a cambiar lo siguie
 
 * **AllowNvramReset**: YES
   * Permite restablecer NVRAM tanto en el selector de arranque como al presionar `Cmd+Opt+P+R`
+  
 * **AllowSetDefault**: YES
   * Permite que `CTRL+Enter` y `CTRL+Index` configuren el dispositivo de arranque predeterminado en el selector
+
 * **ApECID**: 0
   * Usado para compensar identificadores de arranque seguro, actualmente este quirk es faltoso debido a un bug en el instalador de macOS así que te recomendamos que lo dejes como está por defecto.
+
 * **AuthRestart**: NO
   * Habilita el reinicio autenticado para FileVault 2, por lo que no se requiere contraseña al reiniciar. Puede considerarse un riesgo de seguridad así que es opcional
+
 * **BlacklistAppleUpdate**: YES
   * Utilizado para bloquear actualizaciones del firmware como un nivel extra de protección ya que macOS Big Sur dejo de utilizar la variable `run-efi-updater`
-* **BootProtect**: None
-  * Permite el uso de Bootstrap.efi dentro de `EFI/OC/Bootstrap` en lugar de BOOTx64.efi. Útil para aquellos que desean arrancar con rEFInd o evitar sobrescribir BOOTx64.efi con Windows. El uso adecuado de estos quirks está cubierto aquí. [Usar Bootstrap.efi](https://inyextciones.github.io/OpenCore-Post-Install/multiboot/bootstrap.html#preparation)
+
 * **DmgLoading**: Signed
   * Asegura la carga únicamente de DMGs firmados
+
 * **ExposeSensitiveData**: `6`
   * Muestra más información de depuración, requiere la versión de depuración de OpenCore
+
 * **Vault**: `Optional`
   * No trataremos el Vaulting, por lo que podemos ignorar esto, ten en cuenta que **no podrás bootear si esto está configurado en `Secure`**
   * Esta es una palabra, no es opcional omitir esta configuración. Lo lamentarás si no lo configuras en `Optional`, ten en cuenta que distingue entre mayúsculas y minúsculas
+
 * **ScanPolicy**: `0`
   * `0` te permite ver todas las unidades disponibles, consulta la sección [Seguridad](https://dortania.github.io/OpenCore-Post-Install/universal/security.html) para obtener más detalles. **No arrancará dispositivos USB con este ajuste predeterminado**
+
 * **SecureBootModel**: Default
   * Habilita la funcionalidad del arranque seguro de Apple en macOS, por favor refiérete a [Seguridad](https://inyextciones.github.io/OpenCore-Post-Install/universal/security.html) para más información.
   * Nota: Los usuarios pueden encontrar fallas de arranque cuando actualizen OpenCore en un sistema que ya contenga una instalación. Para resolver esto, dirígete aquí: [Trancado en OCB: LoadImage failed - Security Violation](/troubleshooting/extended/kernel-issues.md#trancado-en-ocb-loadimage-failed-security-violation)
