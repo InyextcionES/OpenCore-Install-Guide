@@ -143,16 +143,23 @@ También agregamos 2 propiedades más, `framebuffer-patch-enable` y `framebuffer
 
 :::
 
-::: tip PciRoot(0x0)/Pci(0x1C,0x4)/Pci(0x0,0x0)
+::: Arreglando controladores I225-V
 
 Esta entrada se relaciona con el controlador i225-V 2.5GBe de Intel que se encuentra en las placas Comet Lake de gama alta, lo que haremos aquí es engañar al controlador i225LM de Apple para que admita nuestro controlador de red i225-V:
 
-| Key | Type | Value |
-| :--- | :--- | :--- |
-| device-id | Data | F2150000 |
+ | Key | Type | Value |
+ | :--- | :--- | :--- |
+ | Base | String | __Z18e1000_set_mac_typeP8e1000_hw |
+ | Comment | String | I225-V patch |
+ | Enabled | Boolean | True |
+ | Find | Data | `F2150000` |
+ | Identifier | String | com.apple.driver.AppleIntelI210Ethernet |
+ | MinKernel | String | 19.0.0 |
+ | Replace | Data | `F3150000` |
 
-**Nota**: Si tu placa no Si su placa no vino con el NIC i225 de Intel, no hay razón para agregar esta entrada.
-**Nota 2**: Si tienes un kernel panic del kext i210, el PciRoot de tu Ethernet seguramente sea `PciRoot(0x0)/Pci(0x1C,0x4)/Pci(0x0,0x0)`
+* **Nota**: Si tu placa no Si su placa no vino con el NIC i225 de Intel, no hay razón para agregar esta entrada.
+* **Note 2**: Deja todas los otros valores con sus valores predeterminados
+:::
 
 :::
 
