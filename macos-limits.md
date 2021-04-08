@@ -213,6 +213,9 @@ En su mayor parte, todas las unidades basadas en SATA son compatibles y la mayor
   * Otro caso similar fue con la SSD NVMe 970 EVO Plus de Samsung, pero esto fue corregido con una actualización de firmware. Puedes obtenerla via Windows usando la herramienta Samsung Magician o con una ISO booteable [aquí](https://www.samsung.com/semiconductor/minisite/ssd/download/tools/).
   * También para tener en cuenta, las computadoras portátiles que usan [Intel Optane](https://www.intel.com/content/www/us/en/architecture-and-technology/optane-memory.html) o [Micron 3D XPoint](https://www.micron.com/products/advanced-solutions/3d-xpoint-technology) para la aceleración de discos duros, no son compatibles con macOS. Sin embargo algunos usuarios han reportado éxito en Catalina incluso con soporte de lectura y escritura, pero recomendamos encarecidamente quitar la unidad para evitar posibles problemas de arranque.
 
+  * **Intel 600p**
+   * Por más que es posible arrancar desde estos, por favor ten en cuenta que este modelo puede causar muchos problemas. [Any fix for Intel 600p NVMe Drive? #1286](https://github.com/acidanthera/bugtracker/issues/1286)
+
 ## Conexión a internet cableada
 
 Prácticamente todos los adaptadores de red con cable tienen algún tipo de soporte en macOS, ya sea por los controladores incorporados o por kexts hechos por la comunidad. Las principales excepciones son:
