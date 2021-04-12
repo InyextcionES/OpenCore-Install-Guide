@@ -227,11 +227,11 @@ Este método en realidad depende de las imágenes alojadas por Acidanthera o App
 
 #### Imágenes de Acidanthera
 
-* [OS X 10.4.10(8R4088)](https://mega.nz/folder/D3ASzLzA#7sjYXE2X09f6aGjol_C7dg)
+* [OS X 10.4.10(8R4088)](https://archive.org/details/10.6.7-10j3250-disk-images)[Mirror MEGA](https://mega.nz/folder/D3ASzLzA#7sjYXE2X09f6aGjol_C7dg)
 
-* [OS X 10.5.7(9J3050)](https://mega.nz/folder/inRBTarD#zanf7fUbviwz3WHBU5xpCg)
+* [OS X 10.5.7(9J3050)](https://archive.org/details/10.5.7-9-j-3050)[Mirror MEGA](https://mega.nz/folder/inRBTarD#zanf7fUbviwz3WHBU5xpCg)
 
-* [OS X 10.6.7(10J4139)](https://mega.nz/folder/z5YUhYTb#gA_IRY5KMuYpnNCg7kR3ug/file/ioQkTagI)
+* [OS X 10.6.7(10J4139)](https://archive.org/details/10.4.10-8-r-4088-acdt)[MEGA Mirror](https://mega.nz/folder/z5YUhYTb#gA_IRY5KMuYpnNCg7kR3ug/file/ioQkTagI)
 
 #### Imágenes de Apple
 
