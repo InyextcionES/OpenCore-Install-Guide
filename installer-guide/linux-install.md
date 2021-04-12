@@ -9,8 +9,6 @@ Para comenzar necesitarás lo siguiente:
 * Un USB de 4GB
 * [macrecovery.py](https://github.com/acidanthera/OpenCorePkg/releases)
 
-* Nota: El macrecovery.py de 0.6.8 y anterior está roto, por lo que tendrás que descargar una copia del ["master" de OpenCorePkg](https://github.com/acidanthera/opencorepkg) y utilizar la versión de macrecovery ubicada en Utilities/macrecovery/.
-
 ## Descargando macOS
 
 Ahora, para comenzar utiliza `cd` para llegar a la [carpeta de macrecovery](https://github.com/acidanthera/OpenCorePkg/releases) y luego corre el siguiente comando

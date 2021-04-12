@@ -4,8 +4,6 @@ Este método nos permite descargar versiones legacy de macOS incluyendo 10.7 has
 
 Para comenzar, querrás usar macrecovery.py, herramienta que ya viene incluida en el [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg/releases):
 
-* Nota: El macrecovery.py de 0.6.8 y anterior está roto, por lo que tendrás que descargar una copia del ["master" de OpenCorePkg](https://github.com/acidanthera/opencorepkg) y utilizar la versión de macrecovery ubicada en Utilities/macrecovery/.
-
 ![](../images/installer-guide/legacy-mac-install-md/macrecovery.png)
 
 Las instrucciones para correrlo son bastante simples, elige uno de los comandos de abajo dependiendo de qué SO quieres descargar:
