@@ -92,19 +92,22 @@ Configuraciones relacionadas a el parcheo de boot.efi y arreglos en el firmware.
 
 * **AvoidRuntimeDefrag**: YES
   * Corrige runtime services de UEFI como fecha, hora, NVRAM, control de energía, etc.
+* **EnableSafeModeSlide**: YES
+  * Habilita las variables de Slide en el arranque seguro
 * **DevirtualiseMmio**: YES
   * Reduce la huella de memoria robada, amplía las opciones para los valores `slide = N` y es muy útil para solucionar problemas de asignación de memoria. Requiere de `ProtectUefiServices` en Z490
 * **EnableWriteUnprotector**: NO
   * Este quirk y RebuildAppleMemoryMap pueden entrar en conflicto, recomendamos habilitar este último en plataformas más nuevas y deshabilitar esta entrada.  
   * Sin embargo, debido a problemas de distintos fabricantes que no usan las versiones más nuevas de EDKII podrías encontrar que el combo de arriba cause que tengas fallas en tempranas en el arranque. Esto es debido a la falta de `MEMORY_ATTRIBUTE_TABLE`, por lo que recomendamos que deshabilites RebuildAppleMemoryMap y habilites EnableWriteUnprotector. Más información sobre esto será cubierta en la [sección de solución de problemas](/troubleshooting/troubleshooting.md#trancado-en-eb-log-exitbs-start)
-
 * **ProtectUefiServices**: YES
   * Protege servicios UEFI de ser sobreescritos por el firmware, requerido por Z490
 * **RebuildAppleMemoryMap**: YES
   * Genera un mapa de memoria compatible con macOS, puede romperse en algunos firmwares de laptops de OEMs, así que si recives fallas en el arranque temprando deshabilita esto.
-* **SetupVirtualMap**: YES
+* **SetupVirtualMap**: NO
   * Corrige las llamadas de `SetVirtualAddresses` a `virtual addresses`, no tendría que ser necesario en Skylake y posterior. Algunos firmwares como Gigabyte podrían requerirlo, y pueden causar un kernel panic sin esto. 
   * **Nota**: Placas madre Z490 ASUS, Gigabyte y AsRock Z490 no arrancarán con esto habilitado
+* **ProvideCustomSlide**: YES
+  * Usado para el cálculo de la variable Slide. Sin embargo la necesidad de este es determinada por el mensaje `OCABC: Only N/256 slide values are usable!` en tu registro de depuración. Si aparece el mensaje `OCABC: All slides are usable! You can disable ProvideCustomSlide!` en tu registro, puedes deshabilitar `ProvideCustomSlide`.
 * **SyncRuntimePermissions**: YES
   * Soluciona la alineación con las tablas MAT y es necesario para iniciar Windows y Linux estas, también recomendado para macOS. Principalmente relevante para Skylake y posterior
 
