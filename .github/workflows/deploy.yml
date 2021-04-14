@@ -10,14 +10,13 @@ jobs:
     name: Build and Deploy
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v2-beta
-        with:
-          node-version: '12'
       - name: Checkout Repository
-        uses: actions/checkout@v2.3.1
+        uses: actions/checkout@v2
         with:
           fetch-depth: '0'
-          persist-credentials: false 
+          submodules: 'recursive'
+      - name: Setup Node
+        uses: actions/setup-node@v2-beta
       - name: Install
         run: npm install
       - name: Build
@@ -26,7 +25,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.1
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master'}}
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
           FOLDER: .vuepress/dist/
-          CLEAN: true
