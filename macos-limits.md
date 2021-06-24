@@ -4,13 +4,7 @@ Con macOS, hay numerosas limitaciones de hardware que debes tener en cuenta ante
 
 Las secciones principales a verificar son:
 
-* [CPU](#sporte-de-cpus)
-* [GPU](#soporte-de-gpus)
-* [Placa base](#soporte-de-placas-madre)
-* [Almacenamiento](#compatibilidad-de-almacenamiento)
-* [Internet cableado (Ethernet)](#conexion-a-internet-cableada)
-* [Internet inalámbrico (WiFi)](#conexion-a-internet-inalambrica)
-* [Otros](#otros)
+[[toc]]
 
 Para guías más detalladas en el tema, véase:
 

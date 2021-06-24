@@ -1,19 +1,8 @@
 # Otros problemas misceláneos
 
-* Versión soportada: 0.6.8
+ 
 
-* [No puedes correr `acpidump.efi`](#no-puedes-correr-acpidumpefi)
-* [Arreglando SSDTTime: `Could not locate or download iasl!`](#arreglando-ssdttime-could-not-locate-or-download-iasl)
-* [Arreglar Python: `Python is not installed or not found on PATH`](#arreglar-python-python-is-not-installed-or-not-found-on-path)
-* [El disco de Windows no puede ver discos APFS](#el-disco-de-windows-no-puede-ver-discos-apfs)
-* [Resolución incorrecta con OpenCore](#resolución-incorrecta-con-opencore)
-* [No puedo encontrar el disco de Windows/BootCamp en el menú](#no-puedo-encontrar-el-disco-de-windowsbootcamp-en-el-menú)
-* [Bootear Windows resulta en una pantalla azul o Linux se crashea](#bootear-windows-resulta-en-una-pantalla-azul-o-linux-se-crashea)
-* [Error al iniciar Windows: `OCB: StartImage failed - Already started`](#error-al-iniciar-windows-ocb-startimage-failed---already-started)
-* [iASL warning, # unresolved](#iasl-warning--unresolved)
-* [MediaKit reporta que no hay espacio suficiente](#mediakit-reports-not-enough-space)
-* [Error al iniciar Windows: `OCB: StartImage failed - Already started`](#error-al-iniciar-windows-ocb-startimage-failed---already-started)
-* [Inconsistencia de tiempo entre macOS y Windows](#inconsistencia-de-tiempo-entre-macos-y-windows)
+[[toc]]
 
 ## No puedes correr `acpidump.efi`
 

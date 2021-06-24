@@ -1,18 +1,8 @@
 # Problemas con OpenCore
 
-* Versión soportada: 0.6.8
+ 
 
-* [Trancado en `no vault provided!`](#trancado-en-no-vault-provided)
-* [Trancado en `OC: Invalid Vault mode`](#trancado-en-oc-invalid-vault-mode)
-* [Trancado en `OCB: OcScanForBootEntries failure - Not Found`](#trancado-en-ocb-ocscanforbootentries-failure---not-found)
-* [Trancado en `OCB: failed to match a default boot option`](#trancado-en-ocb-failed-to-match-a-default-boot-option)
-* [Trancado en `OCS: No schema for DSDT, KernelAndKextPatch, RtVariable, SMBIOS, SystemParameters...`](#trancado-en-ocs-no-schema-for-dsdt-kernelandkextpatch-rtvariable-smbios-systemparameters)
-* [Trancado en `OC: Driver XXX.efi at 0 cannot be found`](#trancado-en-oc-driver-xxxefi-at-0-cannot-be-found)
-* [Recibiendo `Failed to parse real field of type 1`](#recibiendo-failed-to-parse-real-field-of-type-1)
-* [No puedo seleccionar nada en el menú de OpenCore](#no-puedo-seleccionar-nada-en-el-menu-de-opencore)
-* [SSDTs no siendo agregados](#ssdts-no-siendo-agregados)
-* [Bootear opencore reinicia a la BIOS](#bootear-opencore-reinicia-a-la-bios)
-* [OCABC: Incompatible OpenRuntime r4, require r10](#ocabc-incompatible-openruntime-r4-require-r10)
+[[toc]]
 
 ## Trancado en `no vault provided!`
 

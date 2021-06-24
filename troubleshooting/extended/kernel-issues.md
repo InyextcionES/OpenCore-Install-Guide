@@ -1,33 +1,10 @@
 # Problemas del kernel
 
-* Versión soportada: 0.6.8
+ 
 
 Aquí se cubre todo lo que puede pasar luego de que seleccionas a macOS en el menú de OpenCore hasta justo antes de que aparezca el logo de Apple y cargue la GUI
 
-* [Trancado en `[EB|#LOG:EXITBS:START]`](#trancado-en-eblogexitbsstart)
-* [Trancado en EndRandomSeed](#trancado-en-endrandomseed)
-* [Kernel Panic en `Invalid frame pointer`](#kernel-panic-en-invalid-frame-pointer)
-* [Trancado en [EB|LD:OFS] Err(0xE) cuando arrancas desde el volumen preboot](#trancado-en-eb-ld-ofs-err-0xe-cuando-arrancas-desde-el-volumen-preboot)
-* [Trancado en `OCB: LoadImage failed - Security Violation`](#trancado-en-ocb-loadimage-failed-security)
-* [Trancado en `OCABC: Memory pool allocation failure - Not Found`](#trancado-en-ocabc-memory-pool-allocation-failure---not-found)
-* [Trancado en `Buffer Too Small`](#trancado-en-buffer-too-small)
-* [Trancado en `Plist only kext has CFBundleExecutable key`](#trancado-en-plist-only-kext-has-cfbundleexecutable-key)
-* [Trancado en `This version of Mac OS X is not supported: Reason Mac...`](#trancado-en-this-version-of-mac-os-x-is-not-supported-reason-mac)
-* [Errores `Couldn't allocate runtime area`](#errores-couldnt-allocate-runtime-area)
-* [Trancado en `RTC...`, `PCI ConfigurationBegins`, `Previous Shutdown...`, `HPET`, `HID: Legacy...`](#trancado-en-rtc-pci-configuration-begins-previous-shutdown-hpet-hid-legacy)
-* [Trancado en ACPI Table loading en B550](#trancado-en-acpi-table-loading-on-b550)
-* ["Waiting for Root Device" o signo de prohibido](#waiting-for-root-device-o-signo-de-prohibido)
-* [Trancado en o cerca de `IOConsoleUsers: gIOScreenLock...`](#trancado-en-o-cerca-de-ioconsoleusers-gioscreenlockgiolockstate-3)
-* [Pantalla revuelta y perturbada en laptops](#pantalla-revuelta-y-perturbada-en-laptops)
-* [Pantalla negra luego de `IOConsoleUsers: gIOScreenLock...` en Navi](#pantalla-negra-luego-de-ioconsoleusers-gioscreenlock-en-navi)
-* [Kernel Panic `Cannot perform kext summary`](#kernel-panic-cannot-perform-kext-summary)
-* [Kernel Panic `AppleIntelMCEReporter`](#kernel-panic-appleintelmcereporter)
-* [Kernel Panic `AppleIntelCPUPowerManagement`](#kernel-panic-appleintelcpupowermanagement)
-* [Teclado funciona pero el trackpad no](#teclado-funciona-pero-el-trackpad-no)
-* [`kextd stall[0]: AppleACPICPU`](#kextd-stall0-appleacpicpu)
-* [Kernel Panic en AppleIntelI210Ethernet](appleinteli210ethernet)
-* [Kernel panic en "Wrong CD Clock Frequency" con laptops Icelake](#kernel-panic-en-wrong-cd-clock-frequency-con-laptops-icelake)
-* [Kernel Panic `AppleACPIPlatform` en 10.13](#kernel-panic-appleacpiplatform-en-10-13)
+[[toc]]
 
 ## Trancado en `[EB|#LOG:EXITBS:START]`
 

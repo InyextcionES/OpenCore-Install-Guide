@@ -1,18 +1,8 @@
 # Problemas del espacio de ususario
 
-* Versión soportada: 0.6.8
+ 
 
-* [Instalador de macOS en ruso](#instalador-de-macos-en-ruso)
-* [Instalador de macOS dañado](#instalador-de-macos-dañado)
-* [Trancado en o cerca de `IOConsoleUsers: gIOScreenLock...`](#trancado-en-o-cerca-de-ioconsoleusers-gioscreenlockgiolockstate-3)
-* [Pantalla revuelta y perturbada en laptops](#pantalla-revuelta-y-perturbada-en-laptops)
-* [Pantalla negra luego de `IOConsoleUsers: gIOScreenLock...` en Navi](#pantalla-negra-luego-de-ioconsoleusers-gioscreenlock-en-navi)
-* [Trancado en el instalador de macOS luego de 30 segundos](#trancado-en-el-instalador-de-macos-luego-de-30-segundos)
-* [macOS congelado just antes del logueo](#macos-congelado-justo-antes-del-logueo)
-* [CPUS de 15h/16h se reinician luego de la pantalla de datos y privacidad](#cpus-de-15h16h-se-reinician-luego-de-la-pantalla-de-datos-y-privacidad)
-* [Fallos al eliminar-formatear en Disk Utility](#fallos-al-eliminar-formatear-en-disk-utility)
-* [Discos SATA no aparecen en Disk Utility](#discos-sata-no-aparecen-en-disk-utility)
-* [Trancado cuando faltan 2 minutos](#trancado-cuando-faltan-2-minutos)
+[[toc]]
 
 ## Instalador de macOS en ruso
 

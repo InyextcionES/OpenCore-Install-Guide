@@ -66,15 +66,7 @@ También tenemos algunas notas especiales con las SMBIOS:
 
 Esta es una lista completa de todos los SMBIOS que Apple soportó en macOS con información extra, como tipos de CPU y GPU.
 
-* [MacBook](#macbook)
-* [MacBook Air](#macbook-air)
-* [MacBook Pro](#macbook-pro)
-* [Mac Mini](#mac-mini)
-* [iMac](#imac)
-* [iMac Pro](#imac-pro)
-* [Mac Pro](#mac-pro)
-* [Xserve](#xserve)
-* [Otras SMBIOS](#otras-smbios)
+[[toc]]
 
 Información sacada de ambas [EveryMac](https://everymac.com) y [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg)
 

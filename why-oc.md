@@ -1,23 +1,10 @@
 
 # ¿Por qué OpenCore encima de Clover y otros?
 
-* Versión soportada 0.6.8
 
 Esta sección es un breve resumen de por qué la comunidad ha estado haciendo la transición a OpenCore. Aquellos que solo quieren una máquina con macOS pueden omitir esta página.
 
-- [¿Por qué OpenCore encima de Clover y otros?](#por-qué-opencore-encima-de-clover-y-otros)
-  - [Características de OpenCore](#características-de-opencore)
-  - [Soporte de Software](#soporte-de-software)
-  - [Inyección de Kexts](#inyección-de-kexts)
-- [Mitos comunes](#mitos-comunes)
-  - [OpenCore no es estable debido a que está en beta](#opencore-no-es-estable-debido-a-que-está-en-beta)
-  - [OpenCore siempre inyecta datos de SMBIOS y ACPI a otros sistemas operativos](#opencore-siempre-inyecta-datos-de-smbios-y-acpi-a-otros-sistemas-operativos)
-  - [OpenCore requiere de una instalación limpia](#opencore-requiere-de-una-instalación-limpia)
-  - [Does OpenCore only support limited versions of macOS](#does-opencore-only-support-limited-versions-of-macos)
-  - [¿OpenCore soporta hardware antiguo?](#opencore-soporta-hardware-antiguo)
-  - [¿OpenCore soporta el arranque de Windows/Linux?](#opencore-soporta-el-arranque-de-windowslinux)
-  - [La legalidad de hackintoshing](#la-legalidad-de-hackintoshing)
-  - [¿macOS soporta GPUs de Nvidia?](#macos-soporta-gpus-de-nvidia)
+[[toc]]
 
 ## Características de OpenCore
 
@@ -33,7 +20,7 @@ Esta sección es un breve resumen de por qué la comunidad ha estado haciendo la
 * Cambios de SO con BootCamp y la selección del dispositivo de arranque son compatibles ya que OpenCore lee las variables NVRAM configuradas por el disco de arranque como una Mac real.
 * Omite la tecla de acceso rápido de arranque a través de boot.efi. Mantiene presionada la tecla `Option` o `ESC` al inicio para elegir un dispositivo de arranque, `Cmd+R` para ingresar a Recuperación o `Cmd+Opt+P+R` para restablecer NVRAM.
 
-## Soporte de Software
+### Soporte de Software
 
 La principal razón por la que alguien puede querer cambiar de otros gestores de arranque a OpenCore es en realidad por el soporte de software:
 
@@ -46,7 +33,7 @@ La principal razón por la que alguien puede querer cambiar de otros gestores de
 * [Parches para AMD](https://github.com/AMD-OSX/AMD_Vanilla/tree/opencore):
   * Tienes hardware basado en AMD? Bueno, los parches de kernel requeridos para iniciar macOS ya no están soportados por Clover, y sólo funcionan con OpenCore.
 
-## Inyección de Kexts
+### Inyección de Kexts
 
 Para entender mejor el sistema de inyección de Kexts de OpenCore, primero debemos mirar cómo funciona Clover:
 
@@ -76,9 +63,9 @@ Cosas a tener en cuenta con el método de OpenCore:
   * OpenCore también soporta el prelinked kernel (V1, encontrada en 10.4 y 10.5, cacheless, Mkext y KernelCollections por lo que también tiene soporte para todas las versiones de Intel de OS X/macOS. Sin embargo, el soporte adecuado ha sido agregado en 10.6 y posterior.
 * Es mucho más estable, ya que se hacen mucho menos parches.
 
-# Mitos comunes
+## Mitos comunes
 
-## OpenCore no es estable debido a que está en beta
+### OpenCore no es estable debido a que está en beta
 
 Respuesta corta: No
 
@@ -98,7 +85,7 @@ Plan de programación/Hoja de ruta:
 
 Así que por favor no veas el número de versión como un obstáculo, y más como algo que estás esperando.
 
-## OpenCore siempre inyecta datos de SMBIOS y ACPI a otros sistemas operativos
+### OpenCore siempre inyecta datos de SMBIOS y ACPI a otros sistemas operativos
 
 Por defecto, OpenCore asumirá que todos los sistemas operativos deben ser tratados por igual en lo que refiere a la información de ACPI y SMBIOS. La razón de esto se divide en tres partes principales:
 
@@ -109,13 +96,13 @@ Por defecto, OpenCore asumirá que todos los sistemas operativos deben ser trata
 
 Sin embargo, hay quirks en OpenCore que permiten que la inyección de SMBIOS esté limitada a macOS mediante un parche vinculado a el parcheo de dónde macOS lee la información de SMBIOS. El quirk `CustomSMIOSGuid` con `CustomSMBIOSMode` puesto en `Custom` puede romperse en el futuro, por lo que sólo recomendamos esta opción en el evento de que cierto software se rompa en otros sistemas operativos. Para tener mejor estabilidad, por favor deshabilita estos quirks.
 
-## OpenCore requiere de una instalación limpia
+### OpenCore requiere de una instalación limpia
 
 Esto no es cierto en el caso de que tengas una instalación "Vanilla". Esto se refiere a si el sistema operativo en sí se ha alterado en alguna manera, como instalando kexts de terceros en el volúmen del sistema u otras modificaciones no admitidas por Apple. Cuando tu sistema haya sido manipulado en gran medida por tí o por utilidades de terceros como Hackintool, recomendamos una nueva instalación para evitar posibles problemas.
 
 Nota para usuarios de Clover: Reestablece tu NVRAM al hacer una instalación con OpenCore, ya que muchas de las variables de Clover pueden entrar en conflicto con OpenCore y macOS.
 
-## Does OpenCore only support limited versions of macOS
+### Does OpenCore only support limited versions of macOS
 
 Desde 0.6.2, ahora puedes arrancar **todas** las versiones de Intel de macOS partiendo de 10.4! El soporte adecuado depende de tu hardware, así que verifícalo por ti mismo: [Limitaciones de Hardware](macos-limits.md)
 
@@ -147,17 +134,17 @@ Acidanthera ha probado muchas versiones, y [Khronokernel](https://github.com/khr
 
 :::
 
-## ¿OpenCore soporta hardware antiguo?
+### ¿OpenCore soporta hardware antiguo?
 
 Por el momento, la mayoría del hardware de Intel está soportado siempre que el sistema operativo lo soporte. Sin embargo, por favor dirígete a la [página de limitaciones de Hardware](macos-limits.md) para obtener más información sobre qué hardware está soportado en qué versiones de macOS
 
 Actualmente, las CPUs de Yonah en adelante han sido testeadas correctamente con OpenCore.
 
-## ¿OpenCore soporta el arranque de Windows/Linux?
+### ¿OpenCore soporta el arranque de Windows/Linux?
 
 OpenCore funciona en la misma manera que cualquier otro bootloader, por lo que respeta a los otros sistemas operativos de la misma manera. Para cualquier otro SO donde el bootloader tiene una ruta o nombre irregular, puedes simplemente agregarlo a la sección BlessOverride
 
-## La legalidad de hackintoshing
+### La legalidad de hackintoshing
 
 Si hablamos de hackintoshing, podemos decir que se encuenta en un "área gris" legal, principalmente porque si bien esto no es ilegal, estamos infringiendo el EULA (El acuerdo de licencia). La razón por la que no es ilegal es la siguiente:
 
@@ -169,7 +156,7 @@ Mientras que la EULA establece que macOS sólo debe ser instalado en Macs reales
 
 * **Nota**: No somos asesores legales oficiales, así que por favor asesórate correctamente tú mismo y discute esto con tus abogados si tienes alguna preocupación.
 
-## ¿macOS soporta GPUs de Nvidia?
+### ¿macOS soporta GPUs de Nvidia?
 
 Debido a problemas relacionados con la compatibilidad de Nvidia en las versiones más recientes de macOS, muchos usuarios han llegado a la conclusión de que macOS nunca soportó las GPUs de Nvidia y, en este momento, no lo hacen. Sin embargo, Apple todavía mantiene y soporta Macs con GPUs Nvidia en su último sistema operativo, como los modelos de MacBook Pro 2013 con GPU Kepler.
 

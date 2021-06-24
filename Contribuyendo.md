@@ -4,9 +4,7 @@
 
 ¿Quieres ayudar a apoyar la guía? Bueno, hay algunas maneras en las que puedes ayudar!
 
-* [Contribuir via problmeas](#contribuir-via-problemas-issues)
-* [Contribuir via Pull Requests](#contribuir-via-pull-requests)
-* [Contribuir via Traducciones](#contribuir-via-traducciones)
+[[toc]]
 
 Nota: Para aquellos que quieran contribuir financieramente, lo apreciamos mucho, pero somos una organización sin fines de lucro. Hacemos esto para enseñar, no para ganar dinero. Si te sobra dinero, te recomendamos que lo dones a una organización benéfica. [Crohn's and Colitis Canada](https://crohnsandcolitis.donorportal.ca/Donation/DonationDetails.aspx?L=en-CA&G=159&F=1097&T=GENER) es una que recomendamos si no tienes ninguna en mente.
 

@@ -1,6 +1,6 @@
 # Recolectando archivos
 
-* Versión soportada: 0.6.8
+ 
 
 Esta sección es para obtener otros archivos necesarios para arrancar macOS, esperamos que conozcas bien tu hardware  antes de comenzar y que hayas hecho un hackintosh antes, ya que no entraremos en detalle aquí. 
 
@@ -11,6 +11,8 @@ Consulta la [**Página de limitaciones de hardware**](/macos-limits.md) para obt
 > ¿Cuáles son algunas formas de averiguar qué hardware tengo?
 
 Mira la siguiente página: [Encontrando tu hardware](./find-hardware.md)
+
+[[toc]]
 
 ## Drivers del firmware
 

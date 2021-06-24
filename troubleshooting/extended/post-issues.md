@@ -1,23 +1,8 @@
 # Problemas de post instalación
 
-* Versión soportada: 0.6.8
+ 
 
-* [iMessage y Siri roto](#imessage-y-siri-roto)
-* [No funciona el Audio](#no-funciona-el-audio)
-* [Reinicio de la BIOS o eres enviado al modo seguro después de reiniciar/apagar](#reinicio-de-la-bios-o-eres-enviado-al-modo-seguro-despues-de-reiniciar-o-apagar)
-* [Touchpad Synaptics basado en ps2 no funciona](#touchpad-synaptics-basado-en-ps2-no-funciona)
-* [Arreglo para teclas de teclado PS2 que no paran de ser presionadas en Dell](arreglo-para-teclas-de-teclado-ps2-que-no-paran-de-ser-presionadas-en-dell)
-* [Falta la aceleración de la GPU de macOS en AMD X570](#falta-la-aceleracion-de-la-gpu-de-macos-en-amd-x570)
-* [DRM roto](#drm-roto)
-* [Memory Modules Misconfigured en MacPro7,1](#memory-modules-misconfigured-en-macpro71)
-* [Aplicaciones crasheando en AMD](#aplicaciones-crasheando-en-amd)
-* [No hay salida de temperatura/ventiladores](#no-hay-salida-de-temperaturaventiladores)
-* [AssetCache Content Caching unavailable en máquinas virtuales](#assetcache-content-caching-unavailable-en-maquinas-virtuales)
-* [Error "You can't change the startup disk to the selected disk"](#error-you-cant-change-the-startup-disk-to-the-selected-disk)
-* [Sistemas Coffee Lake no iniciándose luego de la suspensión del sistema](#sistemas-coffee-lake-no-iniciandose-luego-de-la-suspension-del-sistema)
-* [No se puede controlar el Volumen/Brillo en monitores externos](#no-se-puede-controlar-el-volumenbrillo-en-monitores-externos)
-* [Deshabilitando el SIP](#deshabilitando-el-sip)
-* [Deshacer snapshots de APFS](#deshacer-snapshots-de-apfs)
+[[toc]]
 
 ## iMessage y Siri roto
 

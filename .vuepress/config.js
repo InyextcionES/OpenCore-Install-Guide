@@ -58,7 +58,7 @@ module.exports = {
         repo: 'https://github.com/InyextcionES/OpenCore-Install-Guide',
 		editLinks: true,
 		editLinkText: 'Ayudanos a mejorar esta página!',
-        logo: 'homepage.png',
+        logo: '/homepage.png',
         nav: [{
             text: 'Guías',
             ariaLabel: 'Language Menu',
