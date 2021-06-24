@@ -17,7 +17,7 @@ Para las computadoras que necesiten una versión específica de macOS o que no t
 Para correrlo, simplemente copia y pega el siguiente comando en la terminal:
 
 ```sh
-mkdir ~/macOS-installer && cd ~/macOS-installer && curl -O https://raw.githubusercontent.com/munki/macadmin-scripts/main/installinstallmacos.py && sudo python installinstallmacos.py
+mkdir -p ~/macOS-installer && cd ~/macOS-installer && curl https://raw.githubusercontent.com/munki/macadmin-scripts/main/installinstallmacos.py > installinstallmacos.py && sudo python installinstallmacos.py
 ```
 
 ![](../images/installer-guide/mac-install-md/munki.png)
