@@ -713,13 +713,7 @@ Para aquellos que tienen problemas de booteo, asegúrense de leer primero la [Se
 
 * **NOTA IMPORTANTE: El Subreddit y el servidor de Discord sólo admiten posts en inglés, así que asegúrate de hacerlos en este idioma para evitar inconvenientes.**
 
-**Sanity check**:
 
-Gracias a los esfuerzos de Ramus, también tenemos una herramienta increíble para ayudar a verificar su configuración para aquellos que pueden haberse perdido algo:
-
-* [**Sanity Checker**](https://opencore.slowgeek.com)
-
-Ten en cuenta que esta herramienta no está hecha ni mantenida por Dortania, todos los problemas con este sitio deben enviarse aquí: [Repositorio del Sanity Checker](https://github.com/rlerdorf/OCSanity)
 
 ## Configuración de BIOS de Intel
 
